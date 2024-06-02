@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Insurance Survey Form</h1>
+        <form id="surveyForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="insuranceType">Type of Insurance Needed:</label>
+                <select id="insuranceType" name="insuranceType" required>
+                    <option value="">Select</option>
+                    <option value="health">Health</option>
+                    <option value="life">Life</option>
+                    <option value="auto">Auto</option>
+                    <option value="home">Home</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Do you have existing vehicle insurance?</label>
+                <div>
+                    <label><input type="radio" name="existingInsurance" value="yes" required> Yes</label>
+                    <label><input type="radio" name="existingInsurance" value="no" required> No</label>
+                </div>
+            </div>
+            <div class="form-group existing-insurance-details hidden">
+                <label for="vehicleType">If yes, is it 2-wheeler or 4-wheeler?</label>
+                <select id="vehicleType" name="vehicleType">
+                    <option value="">Select</option>
+                    <option value="2-wheeler">2-wheeler</option>
+                    <option value="4-wheeler">4-wheeler</option>
+                </select>
+            </div>
+            <div class="form-group reason-no-insurance hidden">
+                <label for="reason">If no, reason why?</label>
+                <textarea id="reason" name="reason" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="successMessage" class="hidden">
+            <div class="success-icon">
+                <img src="images.png" alt="Success">
+            </div>
+            <h2>Thank you, <span id="userName"></span>!</h2>
+            <p>We appreciate your feedback. We will get back to you within 2-3 business days.</p>
+            <div id="formSummary"></div>
+            <p class="promotion">As a thank you, use code <strong>INSURE20</strong> for a 20% discount on your next insurance purchase!</p>
+            
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
